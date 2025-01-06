@@ -1,7 +1,9 @@
 const Header = () => {
+  const message = 'Hello world';
+
   return (
     <header>
-      <div>logo</div>
+      <div>{message}</div>
       <nav>
         <ul>
           <li>1</li>
