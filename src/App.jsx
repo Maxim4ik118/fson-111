@@ -1,3 +1,4 @@
+import List from './components/list/List';
 import Message from './components/message/Message';
 
 const App = () => {
@@ -5,15 +6,45 @@ const App = () => {
   const isOnline = false;
   const isLoading = true;
   const age = 17;
+
+  const filmsData = [
+    {
+      id: 2,
+      title: 'GoT',
+    },
+    {
+      id: 3,
+      title: 'Spiderman',
+    },
+    {
+      id: 4,
+      title: 'Batman',
+    },
+  ];
+  const goodsData = [
+    {
+      id: 2,
+      title: 'Potato',
+    },
+    {
+      id: 2,
+      title: 'Carrots',
+    },
+    {
+      id: 3,
+      title: 'Iphone',
+    },
+    {
+      id: 4,
+      title: 'TV',
+    },
+  ];
   return (
     <div>
       {isOnline && <h2>Online</h2>}
-      {isLoading && <h2>Loading...</h2>}
-      {age > 18 ? <h2>Вітаю тебе у клубі дорослих! </h2> : <h2>Йди їж кашу!</h2>}
 
-      <Message author={author} text='Продам холодильник' />
-      <Message author='Петро' text='Продам шоколад' />
-      <Message author='Марина' text='Продам плейстейшн' />
+      <List title='Movies' data={filmsData} />
+      <List title='Goods' data={goodsData} />
     </div>
   );
 };

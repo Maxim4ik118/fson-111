@@ -1,4 +1,4 @@
-const Message = ({ author = 'Unknown author', text }) => {
+const Message = ({ author = 'Unknown author', text = 'https://asdfdsfa.com' }) => {
   return (
     <div>
       <h4>{author}</h4>
