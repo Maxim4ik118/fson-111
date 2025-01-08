@@ -1,0 +1,50 @@
+.listWrapper {
+  &.bordered {
+    border: 1px solid brown;
+  }
+
+  &.success {
+    border: 1px solid greenyellow;
+  }
+  &.warning {
+    border: 1px solid darkorange;
+  }
+  &.contrast {
+    border: 1px solid lime;
+  }
+}
+
+.title {
+  color: blue;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.list {
+  color: green;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .title {
+    color: red;
+    font-size: 22px;
+  }
+  .list {
+    color: blue;
+    font-size: 14px;
+  }
+}

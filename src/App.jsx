@@ -1,8 +1,11 @@
-import List from './components/list/List';
-import Message from './components/message/Message';
+import Container from "./components/Container/Container";
+import List from "./components/list/List";
+import Message from "./components/message/Message";
+
+import goodsData from "./db/goodsData.json";
 
 const App = () => {
-  const author = 'Вальдемар';
+  const author = "Вальдемар";
   const isOnline = false;
   const isLoading = true;
   const age = 17;
@@ -10,41 +13,28 @@ const App = () => {
   const filmsData = [
     {
       id: 2,
-      title: 'GoT',
+      title: "GoT",
     },
     {
       id: 3,
-      title: 'Spiderman',
+      title: "Spiderman",
     },
     {
       id: 4,
-      title: 'Batman',
+      title: "Batman",
     },
   ];
-  const goodsData = [
-    {
-      id: 2,
-      title: 'Potato',
-    },
-    {
-      id: 2,
-      title: 'Carrots',
-    },
-    {
-      id: 3,
-      title: 'Iphone',
-    },
-    {
-      id: 4,
-      title: 'TV',
-    },
-  ];
+
   return (
     <div>
-      {isOnline && <h2>Online</h2>}
+      <Container>{isOnline && <h2>Online</h2>}</Container>
 
-      <List title='Movies' data={filmsData} />
-      <List title='Goods' data={goodsData} />
+      <Container title="Movies section">
+        <List title="Movies" data={filmsData} />
+      </Container>
+      <Container title="Goods section">
+        <List title="Goods" data={goodsData} variant="bordered" />
+      </Container>
     </div>
   );
 };
