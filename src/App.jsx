@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div>
-      <Container>{isOnline && <h2>Online</h2>}</Container>
+      <Container>Hello, FSON 111🎉</Container>
 
       <Container title="Movies section">
         <List title="Movies" data={filmsData} />
